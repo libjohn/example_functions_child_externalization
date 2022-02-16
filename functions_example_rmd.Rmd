@@ -1,0 +1,53 @@
+---
+title: "Functions, externalization, and child documents"
+output: html_document
+---
+
+To work, this document must be either knitted, or at the console: `rmarkdown::render("functions_example_rmd.Rmd")`
+
+Source materials
+
+- https://github.com/jthomasmock/penguin-project/tree/master/03-control-document  
+    - https://youtu.be/WkF7nqEYF1E?t=2384  
+
+
+
+```{r my-multiply-function}
+make_two  <- function(n) {
+    return(2 * n)
+}
+
+```
+
+
+```{r double}
+make_two(8)
+```
+
+Here, load an external document of functions
+
+```{r why, cache=FALSE, include=FALSE}
+knitr::read_chunk("functions_to_use.R")
+```
+
+
+here, reference a sub-group of functions within that document (probably optional)
+
+```{r, multiply_by_two, echo=FALSE, include=FALSE}
+```
+
+
+here, use the functions 
+
+```{r mulitply}
+multiplybytwo(100)
+```
+
+```{r plot-a-car}
+plotcars(cars)
+```
+
+
+
+
+
