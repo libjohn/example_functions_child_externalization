@@ -31,7 +31,7 @@ knitr::read_chunk("functions_to_use.R")
 ```
 
 
-here, reference a sub-group of functions within that document (probably optional)
+here, reference a sub-group of functions within that document 
 
 ```{r, multiply_by_two, echo=FALSE, include=FALSE}
 ```
